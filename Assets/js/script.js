@@ -17,10 +17,25 @@ function generatePassword() {
   console.log(numbers);
 
 // Asking the user what they want in their password using window confirm
-  if (window.confirm("Do you want numbers?")) {
+  if (window.confirm("Do you want numbers in your password?")) {
     console.log(true);
     // needs to generate number(s) if true
   }
+
+ if (window.confirm("Do you want lowercase letters in your password?")) {
+    console.log(true);
+    // needs to generate lowercase letter(s) if true
+  }
+
+  if (window.confirm("Do you want uppercase letters in your password?")) {
+      console.log(true);
+      // needs to generate uppercase letter(s) if true
+    }
+   
+    if (window.confirm("Do you want special characters in your password?")) {
+    console.log(true);
+    // needs to generate special character(s) if true
+    } 
 
   // Using window prompt to ask about password length preference 
   let length = 0;
@@ -31,9 +46,11 @@ function generatePassword() {
   }
 
   console.log(length);
+
+}
   // var password = "password"
   // return password
-}
+// }
 
 
 
