@@ -13,10 +13,23 @@ function writePassword() {
 }
 // function to generate password 
 function generatePassword() {
+  // array for numbers
   const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
   console.log(numbers);
 
-// Asking the user what they want in their password using window confirm
+  // array for lowercase letters
+  const lettersLower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  console.log(lettersLower);
+
+  // array for lowercase letters
+  const lettersUpper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+  console.log(lettersUpper);
+
+  // array for special characters--can't get  ''' or '\' to work 
+  const specialCharacter = [' ', '!', '_', '"', '#', ']', '[', '$', '%', '&', ')', '(', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '^', '`', '{', '{','|', '~'];
+  console.log(specialCharacter);
+
+  // Asking the user what they want in their password using window confirm
   if (window.confirm("Do you want numbers in your password?")) {
     console.log(true);
     // needs to generate number(s) if true
