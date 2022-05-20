@@ -13,6 +13,7 @@ function writePassword() {
 }
 // function to generate password 
 function generatePassword() {
+
   // array for numbers
   const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
   console.log(numbers);
@@ -30,23 +31,31 @@ function generatePassword() {
   console.log(specialCharacter);
 
   // Asking the user what they want in their password using window confirm
-  if (window.confirm("Do you want numbers in your password?")) {
-    console.log(true);
+  if (window.confirm("Do you want numbers in your password?") === true) {
+    console.log(true);  
+    // if user confirms true (clicks okay), let the password have numbers 
+    let password = numbers;
     // needs to generate number(s) if true
   }
 
- if (window.confirm("Do you want lowercase letters in your password?")) {
+ if (window.confirm("Do you want lowercase letters in your password?") === true) {
     console.log(true);
+    // if user confirms true (clicks okay), let the password have lowercase letters 
+    let password = lettersLower;
     // needs to generate lowercase letter(s) if true
   }
 
-  if (window.confirm("Do you want uppercase letters in your password?")) {
+  if (window.confirm("Do you want uppercase letters in your password?") === true) {
       console.log(true);
+      // if user confirms true (clicks okay), let the password have uppercase letters
+      let password = lettersUpper;
       // needs to generate uppercase letter(s) if true
     }
    
-    if (window.confirm("Do you want special characters in your password?")) {
+    if (window.confirm("Do you want special characters in your password?") === true) {
     console.log(true);
+    // if user confirms true (clicks okay), let the password have special characters
+    let password = specialCharacter;;
     // needs to generate special character(s) if true
     } 
 
@@ -61,12 +70,6 @@ function generatePassword() {
   console.log(length);
 
 }
-  // var password = "password"
-  // return password
-// }
-
-
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
