@@ -31,31 +31,23 @@ function generatePassword() {
   console.log(specialCharacter);
 
   // Asking the user what they want in their password using window confirm
-  if (window.confirm("Do you want numbers in your password?") === true) {
+  if (window.confirm("Do you want numbers in your password?")) {
     console.log(true);  
-    // if user confirms true (clicks okay), let the password have numbers 
-    let password = numbers;
     // needs to generate number(s) if true
   }
 
- if (window.confirm("Do you want lowercase letters in your password?") === true) {
+ if (window.confirm("Do you want lowercase letters in your password?")) {
     console.log(true);
-    // if user confirms true (clicks okay), let the password have lowercase letters 
-    let password = lettersLower;
     // needs to generate lowercase letter(s) if true
   }
 
-  if (window.confirm("Do you want uppercase letters in your password?") === true) {
+  if (window.confirm("Do you want uppercase letters in your password?")) {
       console.log(true);
-      // if user confirms true (clicks okay), let the password have uppercase letters
-      let password = lettersUpper;
       // needs to generate uppercase letter(s) if true
     }
    
-    if (window.confirm("Do you want special characters in your password?") === true) {
+  if (window.confirm("Do you want special characters in your password?")) {
     console.log(true);
-    // if user confirms true (clicks okay), let the password have special characters
-    let password = specialCharacter;;
     // needs to generate special character(s) if true
     } 
 
@@ -64,10 +56,16 @@ function generatePassword() {
 
   // while loop 
   while (length < 8 || length > 128) {
-    length = parseInt(prompt("How long do you want your password?"));
+    length = parseInt(prompt("How many characters long do you want your password?"));
   }
 
   console.log(length);
+
+  // return letters, numbers, characters after while loop by using return and Math, detailed in 4 lines below
+ // return numbers[Math.floor(Math.random()*numbers.length)];
+ // return lettersLower[Math.floor(Math.random()*lettersLower.length)];
+ // return lettersUpper[Math.floor(Math.random()*lettersUpper.length)];
+ // return specialCharacters[Math.floor(Math.random()*specialCharacters.length)];
 
 }
 
