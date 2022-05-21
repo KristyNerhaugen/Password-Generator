@@ -16,7 +16,7 @@ function writePassword() {
 function generatePassword() {
 
   // array for numbers
-  var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+  var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
   console.log(numbers);
 
   // array for lowercase letters
@@ -32,7 +32,7 @@ function generatePassword() {
   console.log(specialCharacter);
 
   // Define blank variable for password criteria to attach to
-  let passwordReturn = "";
+  let passwordReturn = [];
 
   // Created password pool to pull citeria into
   var passwordPool = [];
@@ -78,11 +78,6 @@ function generatePassword() {
   }
 
   return passwordReturn;
-  // return letters, numbers, characters by using return and Math, detailed in 4 lines below
-  // return numbers[Math.floor(Math.random()*numbers.length)];
-  // return lettersLower[Math.floor(Math.random()*lettersLower.length)];
-  // return lettersUpper[Math.floor(Math.random()*lettersUpper.length)];
-  // return specialCharacters[Math.floor(Math.random()*specialCharacters.length)];
 
 }
 
