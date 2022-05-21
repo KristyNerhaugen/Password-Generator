@@ -31,6 +31,9 @@ function generatePassword() {
   const specialCharacter = [' ', '!', '_', '"', '#', ']', '[', '$', '%', '&', ')', '(', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '^', '`', '{', '{','|', '~'];
   console.log(specialCharacter);
 
+  // Define blank variable for password criteria to attach to and return 
+  let passwordReturn = "";
+
   // Asking the user what they want in their password using window confirm
   if (window.confirm("Do you want numbers in your password?")) {
     console.log(true);  
@@ -66,15 +69,12 @@ function generatePassword() {
 
   console.log(length);
 
-  // Define blank variable for password criteria to attach to and return 
-  let passwordReturn = "";
-
   // For loop 
   for (var i = 0; i<= length; i++) {
     passwordReturn = Mathfloor(Math.random() * 60);
   }
 
-  // return letters, numbers, characters after while loop by using return and Math, detailed in 4 lines below
+  // return letters, numbers, characters by using return and Math, detailed in 4 lines below
  // return numbers[Math.floor(Math.random()*numbers.length)];
  // return lettersLower[Math.floor(Math.random()*lettersLower.length)];
  // return lettersUpper[Math.floor(Math.random()*lettersUpper.length)];
