@@ -8,6 +8,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
+
   passwordText.value = password;
 
 }
@@ -33,22 +34,26 @@ function generatePassword() {
   // Asking the user what they want in their password using window confirm
   if (window.confirm("Do you want numbers in your password?")) {
     console.log(true);  
-    // needs to generate number(s) if true
+    // Generate number(s) if true
+    passwordReturn += numbers;
   }
 
  if (window.confirm("Do you want lowercase letters in your password?")) {
     console.log(true);
-    // needs to generate lowercase letter(s) if true
+    // Generates lowercase letter(s) if true
+    passwordReturn += lettersLower;
   }
 
   if (window.confirm("Do you want uppercase letters in your password?")) {
       console.log(true);
-      // needs to generate uppercase letter(s) if true
+      // Generates uppercase letter(s) if true
+      passwordReturn += lettersUpper;
     }
    
   if (window.confirm("Do you want special characters in your password?")) {
     console.log(true);
-    // needs to generate special character(s) if true
+    // Generates special character(s) if true
+    passwordReturn += specialCharacter;
     } 
 
   // Using window prompt to ask about password length preference 
@@ -56,10 +61,18 @@ function generatePassword() {
 
   // while loop 
   while (length < 8 || length > 128) {
-    length = parseInt(prompt("How many characters long do you want your password?"));
+    length = parseInt(prompt("How many characters long do you want your password? Password must be 8 to 128 characters long."));
   }
 
   console.log(length);
+
+  // Define blank variable for password criteria to attach to and return 
+  let passwordReturn = "";
+
+  // For loop 
+  for (var i = 0; i<= length; i++) {
+    passwordReturn = Mathfloor(Math.random() * 60);
+  }
 
   // return letters, numbers, characters after while loop by using return and Math, detailed in 4 lines below
  // return numbers[Math.floor(Math.random()*numbers.length)];
