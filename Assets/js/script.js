@@ -35,25 +35,25 @@ function generatePassword() {
   let passwordReturn = "";
 
   // Asking the user what they want in their password using window confirm
-  if (window.confirm("Do you want numbers in your password?")) {
+  if (window.confirm("Do you want numbers in your password?") === true) {
     console.log(true);  
     // Generate number(s) if true
     passwordReturn += numbers;
   }
 
- if (window.confirm("Do you want lowercase letters in your password?")) {
+ if (window.confirm("Do you want lowercase letters in your password?") === true) {
     console.log(true);
     // Generates lowercase letter(s) if true
     passwordReturn += lettersLower;
   }
 
-  if (window.confirm("Do you want uppercase letters in your password?")) {
+  if (window.confirm("Do you want uppercase letters in your password?") === true) {
       console.log(true);
       // Generates uppercase letter(s) if true
       passwordReturn += lettersUpper;
     }
    
-  if (window.confirm("Do you want special characters in your password?")) {
+  if (window.confirm("Do you want special characters in your password?") === true) {
     console.log(true);
     // Generates special character(s) if true
     passwordReturn += specialCharacter;
